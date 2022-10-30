@@ -19,7 +19,8 @@ export default function App(
   return (
     <SessionProvider session={session}>
       <RendererProvider renderer={renderer || createDOMRenderer()}>
-        <SSRProvider>
+        {/* @ts-ignore */}
+        <SSRProvider >
           <FluentProvider theme={webLightTheme}>
             <Component {...pageProps} />
           </FluentProvider>
