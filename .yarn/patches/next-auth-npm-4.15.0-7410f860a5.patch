@@ -1,0 +1,15 @@
+diff --git a/utils/detect-host.js b/utils/detect-host.js
+index 59f70f4d91b4a27f9a7eac0c4503347657313a73..057e7253fe979cd2ba5141409e2ae3962fb6a7ca 100644
+--- a/utils/detect-host.js
++++ b/utils/detect-host.js
+@@ -8,6 +8,10 @@ exports.detectHost = detectHost;
+ function detectHost(forwardedHost) {
+   var _process$env$VERCEL;
+ 
++  if (process.env.NEXTAUTH_URL_INTERNAL) {
++    return process.env.NEXTAUTH_URL_INTERNAL;
++  }
++
+   if ((_process$env$VERCEL = process.env.VERCEL) !== null && _process$env$VERCEL !== void 0 ? _process$env$VERCEL : process.env.AUTH_TRUST_HOST) return forwardedHost;
+   return process.env.NEXTAUTH_URL;
+ }

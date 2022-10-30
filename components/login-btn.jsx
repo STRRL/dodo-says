@@ -13,7 +13,7 @@ export default function LoginBtn() {
   return (
     <>
       Not signed in <br />
-      <button onClick={() => signIn()}>Sign in</button>
+      <button onClick={() => signIn("github")}>Sign in</button>
     </>
   )
 }
