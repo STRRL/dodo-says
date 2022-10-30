@@ -3,10 +3,13 @@ import { Avatar, Badge } from "@fluentui/react-components";
 import { Body1, Caption1, Button } from "@fluentui/react-components";
 import { Card, CardFooter, CardHeader, CardPreview } from "@fluentui/react-components/unstable";
 import { ArrowReplyRegular, ShareRegular } from '@fluentui/react-icons';
+import { tokens } from '@fluentui/react-theme';
 
 export default function Home() {
   return (
-    <div className='container mx-auto'>
+    <div className='container mx-auto min-h-screen' style={
+      { backgroundColor: tokens.colorNeutralBackground2 }
+    }>
       <Head>
         <title>dodo says</title>
         <meta name="description" content="what does dodo says" />
@@ -26,7 +29,9 @@ export default function Home() {
         </nav>
 
         <div className='flex px-8 py-2'>
-          <div className='flex-initial w-16 px-4'>
+          <div className='flex flex-col flex-initial px-2 h-full' style={
+            { backgroundColor: tokens.colorNeutralBackground4 }
+          }>
             <Avatar className='m-2' shape='square' active="unset" name="Rooster 1" />
             <Avatar className='m-2' shape='square' active="active" name="Rooster 2" />
             <Avatar className='m-2' shape='square' active="unset" name="Rooster 3" />
