@@ -29,14 +29,16 @@ export default function App(
 ) {
 
   const getLayout = Component.getLayout ?? ((page) => page)
-  return getLayout(
+  return (
     <SessionProvider session={session}>
       <RendererProvider renderer={renderer || createDOMRenderer()}>
         {/* @ts-ignore */}
         <SSRProvider >
           <FluentProvider theme={webLightTheme}>
             <Layout>
-              <Component {...pageProps} />
+              {getLayout(
+                <Component {...pageProps} />
+              )}
             </Layout>
           </FluentProvider>
         </SSRProvider>

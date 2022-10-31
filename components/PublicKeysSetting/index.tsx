@@ -26,20 +26,21 @@ const PublicKeysSetting = () => {
                             image={
                                 <div className="flex flex-col items-center">
                                     <Key24Regular className="w-16 h-16" /><Caption1>SSH Key</Caption1>
-                                </div>}
+                                </div>
+                            }
 
                             description={
                                 <div className="flex">
                                     <div className="flex-1">
                                         <Body1 block className="py-1">
-                                            <b>strrl@giu</b> <a>(used by 2 rooster)</a>
+                                            <b>strrl@giu</b> <a>(used by 2 roost)</a>
                                         </Body1>
                                         <Caption1 block>SHA256:TYMYgoxE6O+Va8OguWvVTIvftNF29lxQS6wXEQz5E4c</Caption1>
                                         <Caption1 block>Added on May 13, 2021</Caption1>
                                         <Caption1 block>Last used within the last 4 months</Caption1>
                                     </div>
                                     <div className="h-full self-center">
-                                            <Button className="" appearance="secondary" disabled><a>delete</a></Button>
+                                        <Button className="" appearance="secondary" disabled><a>delete</a></Button>
                                     </div>
                                 </div>
                             }
@@ -63,7 +64,7 @@ const PublicKeysSetting = () => {
                                         <Caption1 block>Last used within the last 4 months</Caption1>
                                     </div>
                                     <div className="h-full self-center">
-                                            <Button className="" appearance="secondary"><a>delete</a></Button>
+                                        <Button className="" appearance="secondary"><a>delete</a></Button>
                                     </div>
                                 </div>
                             }

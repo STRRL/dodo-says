@@ -67,3 +67,5 @@ go.work
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+.vscode
