@@ -50,7 +50,7 @@ interface RoostAvatarProps {
 const RoostAvatar = ({ roostId, name, selectedRoost }: RoostAvatarProps) => {
     const router = useRouter();
     return (<Avatar className='cursor-pointer m-2' shape='square' active={roostId === selectedRoost ? "active" : "unset"} name={name} onClick={() => {
-        router.push(`/roost/${roostId}`);
+        router.push(`/roost/${roostId}/thread`);
     }} />
     )
 }
